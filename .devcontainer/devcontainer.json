@@ -25,14 +25,14 @@
 				"xabikos.JavaScriptSnippets",
 				"formulahendry.auto-rename-tag",
 				"formulahendry.auto-close-tag",
-				"tal7aouy.rainbow-bracket",
 				"shardulm94.trailing-spaces",
 				"eamodio.gitlens",
 				"esbenp.prettier-vscode",
 				"dbaeumer.vscode-eslint",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"dsznajder.es7-react-js-snippets",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"oderwat.indent-rainbow"
 			]
 		}
 	}
