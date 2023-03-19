@@ -8,24 +8,24 @@ import { graphql, Link, navigate } from "gatsby"
 const IndexPage = ({ data }) => (
   <Layout>
     <section className="bg-white dark:bg-gray-900">
-        <div className="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div className="place-self-center mr-auto lg:col-span-7">
-                <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">no fly, no pigs</h1>
-                <p className="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Pigs Can Fly: Experience the Magic of our Big Band</p>
-            </div>
-            <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="https://images.microcms-assets.io/assets/5084b49f40dd4197ad075bb54f28547b/edc40e256e484652aee7d3ec45b40f03/flying-pigs.png" alt="flying-pigs" />
-            </div>
+      <div className="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div className="place-self-center mr-auto lg:col-span-7">
+          <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">no fly, no pigs</h1>
+            <p className="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Pigs Can Fly: Experience the Magic of our Big Band</p>
         </div>
+        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img src="https://images.microcms-assets.io/assets/5084b49f40dd4197ad075bb54f28547b/edc40e256e484652aee7d3ec45b40f03/flying-pigs.png" alt="flying-pigs" />
+        </div>
+      </div>
     </section>
 
 <div className="bg-white pt-6 sm:pt-8 lg:pt-12">
   <div className="max-w-screen-2xl px-4 md:px-24 pb-4 mx-auto">
     <div className="flex flex-wrap sm:flex-nowrap sm:justify-center sm:items-center bg-indigo-500 rounded-lg shadow-lg relative sm:gap-3 px-4 sm:pr-8 md:px-8 py-3">
-        <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-white text-sm md:text-base mb-2 sm:mb-0">
-        お知らせ：「横須賀トモダチジャズ2022」に出演しました。
-        <a href="/" className="order-last sm:order-none w-full sm:w-auto inline-block bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2">詳細はこちら</a>
-        </div>
+      <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-white text-sm md:text-base mb-2 sm:mb-0">
+      お知らせ：「横須賀トモダチジャズ2022」に出演しました。
+      <a href="/" className="order-last sm:order-none w-full sm:w-auto inline-block bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2">詳細はこちら</a>
+      </div>
     </div>
   </div>
 </div>
