@@ -14,7 +14,29 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "cd site; yarn install"
+	"postCreateCommand": "cd site; yarn install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscode-icons-team.vscode-icons",
+				"MS-CEINTL.vscode-language-pack-ja",
+				"ryu1kn.partial-diff",
+				"mrmlnc.vscode-duplicate",
+				"xabikos.JavaScriptSnippets",
+				"formulahendry.auto-rename-tag",
+				"formulahendry.auto-close-tag",
+				"shardulm94.trailing-spaces",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"dsznajder.es7-react-js-snippets",
+				"bradlc.vscode-tailwindcss",
+				"oderwat.indent-rainbow",
+				"github.vscode-pull-request-github"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
