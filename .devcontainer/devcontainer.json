@@ -32,7 +32,8 @@
 				"VisualStudioExptTeam.vscodeintellicode",
 				"dsznajder.es7-react-js-snippets",
 				"bradlc.vscode-tailwindcss",
-				"oderwat.indent-rainbow"
+				"oderwat.indent-rainbow",
+				"github.vscode-pull-request-github"
 			]
 		}
 	}
