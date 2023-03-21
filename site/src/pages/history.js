@@ -9,7 +9,7 @@ const HistoryPage = ({data}) => (
   <Layout>
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-10 mx-auto">
-        <div className="flex flex-col">
+        <div className="md:flex flex-col">
           <div className="h-1 bg-gray-200 rounded overflow-hidden">
             <div className="w-24 h-full bg-indigo-500"></div>
           </div>
@@ -19,16 +19,16 @@ const HistoryPage = ({data}) => (
           <div
             dangerouslySetInnerHTML={{ __html: data.allMicrocmsStatic.edges[0].node.content }}
           />
-          <div className="mt-4 -mb-3 w-3/5">
-            <div className="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25">
+          <div className="mt-4 -mb-3 max-w-2xl">
+            <div className="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-600">
               <div className="relative rounded-xl overflow-auto">
                 <div className="shadow-sm overflow-hidden my-8">
                   <table className="border-collapse table-fixed w-full text-sm">
                     <thead>
                       <tr>
-                        <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Name</th>
-                        <th className="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Place</th>
-                        <th className="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Date</th>
+                        <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-500 dark:text-slate-400 text-left">Name</th>
+                        <th className="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-500 dark:text-slate-400 text-left">Place</th>
+                        <th className="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-500 dark:text-slate-400 text-left">Date</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white dark:bg-slate-800">

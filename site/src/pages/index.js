@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => (
           <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">no fly, no pigs</h1>
             <p className="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Pigs Can Fly: Experience the Magic of our Big Band</p>
         </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <div className="lg:mt-0 lg:col-span-5 lg:flex">
           <img src="https://images.microcms-assets.io/assets/5084b49f40dd4197ad075bb54f28547b/edc40e256e484652aee7d3ec45b40f03/flying-pigs.png" alt="flying-pigs" />
         </div>
       </div>
