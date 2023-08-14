@@ -19,37 +19,31 @@ const HistoryPage = ({data}) => (
           <div
             dangerouslySetInnerHTML={{ __html: data.allMicrocmsStatic.edges[0].node.content }}
           />
-          <div className="mt-4 -mb-3 max-w-2xl">
-            <div className="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-600">
-              <div className="relative rounded-xl overflow-auto">
-                <div className="shadow-sm overflow-hidden my-8">
-                  <table className="border-collapse table-fixed w-full text-sm">
-                    <thead>
-                      <tr>
-                        <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-500 dark:text-slate-400 text-left">Name</th>
-                        <th className="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-500 dark:text-slate-400 text-left">Place</th>
-                        <th className="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-500 dark:text-slate-400 text-left">Date</th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white dark:bg-slate-800">
-                      {data.allMicrocmsHistory.nodes.map((node, index) => (
-                        <tr key={index}>
-                          <td className="border-b border-slate-100 dark:border-slate-700 p-2 pl-8 text-slate-500 dark:text-slate-400">
-                            <Link to={"/live/" + node.slug}>{node.title}</Link>
-                          </td>
-                          <td className="border-b border-slate-100 dark:border-slate-700 p-2 text-slate-500 dark:text-slate-400">{node.place}</td>
-                          <td className="border-b border-slate-100 dark:border-slate-700 p-2 pr-8 text-slate-500 dark:text-slate-400">
-                            {format(Date.parse(node.postDate), "yyyy年M月d日", {
-                              locale: ja,
-                            })}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+          <div className="grid grid-cols-3 gap-4">
+          {data.allMicrocmsHistory.nodes.map((node, index) => (
+            <div key={index} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+              <Link to={"/live/" + node.slug}>
+                <img className="rounded-t-lg" src={node.eyeCatchImg.url} alt="" />
+              </Link>
+              <div className="p-5">
+                <Link to={"/live/" + node.slug}>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{node.title}</h5>
+                </Link>
+                <p className="mb-3 font-normal text-gray-700">
+                  {format(Date.parse(node.postDate), "yyyy年M月d日", {
+                    locale: ja,
+                  })}<br/>
+                  {node.place}
+                </p>
+                <Link to={"/live/" + node.slug} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  Read more
+                    <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </Link>
               </div>
             </div>
+          ))}
           </div>
         </div>
       </div>
@@ -75,7 +69,11 @@ export const query = graphql`
       place
       postDate
       slug
-    }
+      eyeCatchImg {
+        url
+        height
+        width
+      }    }
   }
 }
 `
