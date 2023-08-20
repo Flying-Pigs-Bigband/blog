@@ -23,8 +23,9 @@ const IndexPage = ({ data }) => (
   <div className="max-w-screen-2xl px-4 md:px-24 pb-4 mx-auto">
     <div className="flex flex-wrap sm:flex-nowrap sm:justify-center sm:items-center bg-indigo-500 rounded-lg shadow-lg relative sm:gap-3 px-4 sm:pr-8 md:px-8 py-3">
       <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-white text-sm md:text-base mb-2 sm:mb-0">
-      お知らせ：「横須賀トモダチジャズ2023」に出演します。
-      <a href="/" className="order-last sm:order-none w-full sm:w-auto inline-block bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2">詳細はこちら</a>
+      <div
+        dangerouslySetInnerHTML={{ __html: data.allMicrocmsStatic.edges[0].node.content }}
+      />
       </div>
     </div>
   </div>
